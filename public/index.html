@@ -4,14 +4,81 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <link rel="shortcut icon" href="<%= BASE_URL %>favicon.ico">
+    
+    
     <title><%= htmlWebpackPlugin.options.title %></title>
+
+    <meta property="og:title" content="ApexTeks" data-vmid="og:title">
+    <meta property="og:image" content="https://raw.githubusercontent.com/Daniel001-odii/odiiDaniel/main/images/waitllist-og.png" data-vmid="og:image">
+    <meta property="og:image:secure_url" content="https://raw.githubusercontent.com/Daniel001-odii/odiiDaniel/main/images/waitllist-og.png" data-vmid="og:image:secure_url">
+    <meta property="twitter:title" content="ApexTeks" data-vmid="twitter:title">
+    <meta property="twitter:image" content="https://raw.githubusercontent.com/Daniel001-odii/odiiDaniel/main/images/waitllist-og.png" data-vmid="twitter:image">
+    <meta property="og:locale" content="en_US" data-vmid="og:locale">
+    <meta property="twitter:card" content="summary_large_image" data-vmid="twitter:card"><meta property="og:type" content="website" data-vmid="og:type">
+    <meta property="og:site_name" content="ApexTeks" data-vmid="og:site_name">
+
+   
+    <meta name="keywords" content="Apexteks, Hire technicians Nigeria, Technical jobs Nigeria, Technical skills Nigeria, Technician recruitment, Skilled workers Nigeria, Technician platform Nigeria, Technical service providers, IT technicians Nigeria, Mechanical technicians Nigeria, Electrical technicians Nigeria, Engineering jobs Nigeria, Skilled trades Nigeria, Nigeria tech jobs, Technical freelancers Nigeria, Find technicians Nigeria, Hire skilled workers Nigeria, Nigeria technician marketplace, Technical jobs platform Nigeria, Skilled labor Nigeria, Contract technicians Nigeria, Technical support Nigeria, Apexteks platform, Tech job search Nigeria, Freelance technicians Nigeria, On-demand technicians Nigeria, Technical expertise Nigeria, IT support Nigeria, Tech service marketplace Nigeria, Technician employment Nigeria">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Apexteks">
+
+
+    <meta name="description" content="Apexteks is a leading platform in Nigeria for hiring skilled technicians and technical professionals. Register, apply for jobs, or hire qualified technicians across various fields including IT, engineering, electrical, and mechanical services.">
+    <meta property="og:description" content="ApexTeks is a job search platform in Nigeria. We establish trusted networking between freelancers and businesses all across the nation. Qualified job seekers find the best in-demand jobs of their desired skills anywhere nationwide." data-vmid="og:description">
+    <meta property="twitter:description" content="ApexTeks is a job search platform in Nigeria. We establish trusted networking between freelancers and businesses all across the nation. Qualified job seekers find the best in-demand jobs of their desired skills anywhere nationwide." data-vmid="twitter:description">
+    
+
+<!-- GOOGLE FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+
+    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" /> -->
+    <script>
+      // / On page load or when changing themes, best to add inline in `head` to avoid FOUC
+      if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark')
+      } else {
+        document.documentElement.classList.remove('dark')
+      }
+    </script>
+
+
+<!-- POPPINS FONT -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+
   </head>
   <body>
     <noscript>
       <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
     </noscript>
     <div id="app"></div>
+    <!-- <link rel="icon" href="<%= BASE_URL %>frame.ico"> -->
+    <!-- <link rel="shortcut icon" type="image/ico" href="./ApexTeks.png"/> -->
     <!-- built files will be auto injected -->
+    <!-- <script src="../node_modules/flowbite/dist/flowbite.min.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script> -->
+   
   </body>
+  <style>
+    *{
+      box-sizing: border-box;
+    }
+
+    body{
+      height: 100%;
+      width: 100%;
+      border: 0;
+      margin: 0;
+    }
+ 
+  </style>
 </html>
