@@ -99,6 +99,7 @@ export default {
               this.form_filled = true;
               this.loading = false;
           }catch(error){
+            console.log("error: ", error)
               this.error = error.response.data.message;
               this.loading = false;
           }
