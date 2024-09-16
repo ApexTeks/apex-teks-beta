@@ -119,7 +119,8 @@ font-variation-settings:
 }
 
 .wl-background{
-background-image: url('assets/images/Waitlist_bg.png');
+/* background-image: url('assets/images/Waitlist_bg.png'); */
+background: black;
 background-size: cover;
 background-position: center;
 background-origin: content-box
