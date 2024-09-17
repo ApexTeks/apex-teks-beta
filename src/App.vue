@@ -20,12 +20,17 @@
               </span>
 
               <!-- FORM AREA -->
+              <p class="text-red-400 font-bold p-3 inline-block" v-if="error"> {{  error }}</p>
               <form @submit.prevent="joinWaitList" class="flex  flex-col md:flex-row gap-2 mt-8 w-full">
-                  <p class="text-red-400 font-bold p-3 inline-block" v-if="error"> {{  error }}</p>
+                  
                   <input type="email" required class="text-sm rounded-md px-6 h-14 w-full md:w-[60%]  text-gray-600" placeholder="youemail@gmail.com" v-model="user_form.email"/>
-                  <button :disabled="loading" type="submit" class="gradient-button text-sm w-full md:w-[40%]">
-                      <span class="btn-text font-bold" v-if="loading">loading...</span>
-                      <span class="btn-text font-bold" v-else>Join Waitlist</span>
+                  <button :disabled="loading" type="submit" class="gradient-button text-sm w-full md:w-[40%] relative flex justify-center items-center">
+                  
+                      <!-- <span class="btn-text font-bold" v-if="loading">loading...</span> -->
+                        <SpinnerComponent v-if="loading"/>
+                        <span class="btn-text font-bold" v-else>Join Waitlist</span>
+                      <!-- <span class="btn-text font-bold">Join Waitlist</span> -->
+                      <!-- <span class="btn-text font-bold" v-else>Join Waitlist</span> -->
                   </button>
               </form>
           </div>
@@ -73,12 +78,15 @@
 import StrikeLineSvg from '@/components/StrikeLineSvg.vue';
 import MiniFooter from '@/components/MiniFooter.vue';
 import axios from 'axios';
+import SpinnerComponent from './components/SpinnerComponent.vue';
+
 
 export default {
   name: "WaitListPageView",
   components: {
       StrikeLineSvg,
       MiniFooter,
+      SpinnerComponent
   },
   data(){
       return {
@@ -160,7 +168,7 @@ background-clip: border-box;
 
 }
 
-.gradient-button:disabled::after{
+/* .gradient-button:disabled::after{
 content: none;
 }
 
@@ -173,5 +181,5 @@ transition: transform 0.3s;
 
 .gradient-button:hover::after {
 transform: translateX(5px);
-}
+} */
 </style>
