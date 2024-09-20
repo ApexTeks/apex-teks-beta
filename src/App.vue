@@ -23,7 +23,7 @@
               <p class="text-red-400 font-bold p-3 inline-block" v-if="error"> {{  error }}</p>
               <form @submit.prevent="joinWaitList" class="flex  flex-col md:flex-row gap-2 mt-8 w-full">
                   
-                  <input type="email" required class="text-sm rounded-md px-6 h-14 w-full md:w-[60%]  text-gray-600" placeholder="youemail@gmail.com" v-model="user_form.email"/>
+                  <input type="email" name="email" id="email" required class="text-sm rounded-md px-6 h-14 w-full md:w-[60%]  text-gray-600" placeholder="youemail@gmail.com" v-model="user_form.email"/>
                   <button :disabled="loading" type="submit" class="gradient-button text-sm w-full md:w-[40%] relative flex justify-center items-center">
                   
                       <!-- <span class="btn-text font-bold" v-if="loading">loading...</span> -->
