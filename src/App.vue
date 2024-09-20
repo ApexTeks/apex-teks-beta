@@ -107,7 +107,7 @@ export default {
       async joinWaitList(){
           try{
               this.loading = true;
-              const response = await axios.post('http://localhost:8000/api/onboard', this.user_form);
+              const response = await axios.post('https://www.api.apexteks.com/api/onboard', this.user_form);
               this.form_filled = true;
               this.loading = false;
           }catch(error){
