@@ -22,8 +22,8 @@
               <!-- FORM AREA -->
               <p class="text-red-400 font-bold p-3 inline-block" v-if="error"> {{  error }}</p>
               <form @submit.prevent="joinWaitList" class="flex  flex-col md:flex-row gap-2 mt-8 w-full">
-                 
-                  <!-- {{ this.$route.params.provider }} -->
+                 <!-- {{this.$route.query}}
+                  {{ this.user_form }} -->
                   <input type="email" name="email" id="email" required class="text-sm rounded-md px-6 h-14 w-full md:w-[60%]  text-gray-600" placeholder="youemail@gmail.com" v-model="user_form.email"/>
                   <button :disabled="loading" type="submit" class="gradient-button text-sm w-full md:w-[40%] relative flex justify-center items-center">
                   
@@ -97,7 +97,7 @@ export default {
           loading: false,
           user_form: {
               email: '',
-              provider: this.$route.params.provider,
+              provider: this.$route.query,
           },
           error: '',
       }
@@ -107,6 +107,7 @@ export default {
       async joinWaitList(){
           try{
               this.loading = true;
+              this.user_form.provider = this.$route.query.socials;
               const response = await axios.post('https://www.api.apexteks.com/api/onboard', this.user_form);
               this.form_filled = true;
               this.loading = false;

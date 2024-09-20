@@ -3,16 +3,16 @@ import HomeView from '../views/HomeView.vue'
 
 const routes = [
   {
-    path: '/',
+    path: '',
     name: 'home',
     component: HomeView
   },
 
-  {
+ /*  {
     path: '/socials/:provider',
     name: 'provider',
     component: HomeView
-  }
+  } */
 ]
 
 const router = createRouter({
