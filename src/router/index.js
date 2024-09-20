@@ -6,6 +6,12 @@ const routes = [
     path: '/',
     name: 'home',
     component: HomeView
+  },
+
+  {
+    path: '/socials/:provider',
+    name: 'provider',
+    component: HomeView
   }
 ]
 

@@ -22,7 +22,8 @@
               <!-- FORM AREA -->
               <p class="text-red-400 font-bold p-3 inline-block" v-if="error"> {{  error }}</p>
               <form @submit.prevent="joinWaitList" class="flex  flex-col md:flex-row gap-2 mt-8 w-full">
-                  
+                 
+                  <!-- {{ this.$route.params.provider }} -->
                   <input type="email" name="email" id="email" required class="text-sm rounded-md px-6 h-14 w-full md:w-[60%]  text-gray-600" placeholder="youemail@gmail.com" v-model="user_form.email"/>
                   <button :disabled="loading" type="submit" class="gradient-button text-sm w-full md:w-[40%] relative flex justify-center items-center">
                   
@@ -34,6 +35,8 @@
                   </button>
               </form>
           </div>
+
+          <!-- <span class="text-red-500"> provider: {{ this.$route.params.provider }}</span> -->
 
           <!-- RIGHT SIDE IMAGE -->
           <div class="w-full h-[400px] md:h-[600px] md:w-[60%] flex-grow-1 relative flex justify-center items-center right-image">
@@ -94,6 +97,7 @@ export default {
           loading: false,
           user_form: {
               email: '',
+              provider: this.$route.params.provider,
           },
           error: '',
       }
@@ -103,14 +107,18 @@ export default {
       async joinWaitList(){
           try{
               this.loading = true;
-              const response = await axios.post('https://www.api.apexteks.com/api/onboard', this.user_form);
+              const response = await axios.post('http://localhost:8000/api/onboard', this.user_form);
               this.form_filled = true;
               this.loading = false;
           }catch(error){
               this.error = error.response.data.message;
               this.loading = false;
           }
-      }
+      },
+  },
+
+  mounted(){
+    // this.user_form.provider  = this.$route.params.provider
   }
 }
 </script>
